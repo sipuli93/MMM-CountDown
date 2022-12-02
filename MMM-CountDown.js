@@ -46,11 +46,12 @@ Module.register("MMM-CountDown",{
 		var hrs = '';
 		var mins = '';
 		var secs = '';
-		var days = diffDays + this.config.daysLabel;
+		var days = diffDays + '<sup>' + this.config.daysLabel + '</sup>';
 
-		if(this.config.showHours == true) hrs = diffHours + this.config.hoursLabel;
-		if(this.config.showMinutes == true) mins = diffMinutes + this.config.minutesLabel;
-		if(this.config.showSeconds == true) secs = diffSeconds + this.config.secondsLabel;
+		if(this.config.showHours == true) hrs = diffHours + '<sup>' + this.config.hoursLabel + '</sup>';
+		if(this.config.showMinutes == true) mins = diffMinutes + '<sup>' + this.config.minutesLabel + '</sup>';
+		if(this.config.showSeconds == true) secs = diffSeconds + '<sup>' + this.config.secondsLabel + '</sup>';
+
 
 		timeWrapper.innerHTML = days + hrs + mins + secs;
 
